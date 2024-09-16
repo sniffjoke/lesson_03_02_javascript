@@ -63,3 +63,59 @@
 //
 // car1.f()
 // car2.f()
+
+// let car = {
+//     brand: 'bmw',
+//     startEngine: () => {
+//         console.log(`start ${this.brand}`);
+//     }
+// }
+//
+// car.startEngine();
+
+// ------------------------------------------------------------------------ //
+// 3. call, apply, bind
+
+// const car = {
+//     brand: 'bmw',
+//     speed: 200,
+//     showMaxSpeed() {
+//         // console.log(`Start ${this.brand}`);
+//         console.log(this.speed);
+//     }
+// }
+//
+// const scooter = {
+//     brand: 'honda',
+//     speed: 60
+// }
+//
+// const ferrari = {
+//     brand: 'ferrari',
+//     speed: 300
+// }
+
+// car.showMaxSpeed.call(scooter, 10, 20) // call вызывает первый переданный аргумент
+// car.showMaxSpeed.apply(scooter, [10, 20]) // apply забирает первый переданный аргумент // аргументы передаются как массив
+
+// car.showMaxSpeed.bind(scooter, 10, 20)() // возвращает функцию-обертку
+// car.showMaxSpeed.bind(scooter).call(ferrari);
+
+// нельзя изменить контекст больше одного раза
+// стрелочную функцию переопределить нельзя
+
+// const car = {
+//     brand: 'bmw',
+//     speed: 200,
+//     showMaxSpeed() {
+        // console.log(this.speed);
+    // }
+// }
+
+// setTimeout(car.showMaxSpeed.bind(car), 1000);
+// setTimeout(car.showMaxSpeed.bind(car), 1000);
+
+// ------------------------------------------------------------------------ //
+// 4. Function constructors
+
+
