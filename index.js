@@ -118,4 +118,26 @@
 // ------------------------------------------------------------------------ //
 // 4. Function constructors
 
+// const car1 = {
+//     brand: 'bmw'
+// }
 
+// const car2 = {
+//     brand: 'kia'
+// }
+
+// const car3 = {
+//     brand: 'audi'
+// }
+
+function CarCreator(brand) {
+    // {}
+    this.brand = brand; // {brand: 'bmw'}
+    // return {brand: 'bmw'}
+}
+
+const car1 = new CarCreator('bmw');
+const car2 = new CarCreator('kia');
+const car3 = new CarCreator('audi');
+
+console.log(car1)
